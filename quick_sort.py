@@ -5,7 +5,7 @@ def quick_sort(lst: list) -> list:
 	if len(lst) < 2:
 		return lst
 	else:
-		main = lst[0]
+		main = lst[len(lst)//2]
 		less = [i for i in lst[1:] if i <= main]
 		greater = [i for i in lst[1:] if i > main]
 		return quick_sort(less) + [main] + quick_sort(greater)
